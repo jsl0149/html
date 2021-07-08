@@ -5,8 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나다반갑다</title>
+    <link rel="stylesheet"  type = "text/css" href="style.css">
+    <style>
+        .js{
+            font-weight: bold;
+            color: red;
+        }
+
+        #us{
+            color : green;
+        }
+
+        span{
+            color:blue;
+        }
+
+    </style>
+
+    <script>
+
+        function nightDayHandler(self){
+
+        var alist = document.querySelectorAll('a');
+        var target =  document.querySelector('body');
+
+        if(self.value === 'night'){
+        
+            
+        for(i = 0;i<alist.length;i++){
+            alist[i].style.color = 'powderblue';
+        }    
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'day';
+        }
+
+        else{
+
+            for(i = 0;i<alist.length;i++){
+            alist[i].style.color = 'blue';
+            }     
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'night';
+        }
+
+    }
+    </script>
+
 </head>
 <body>
+
+
+    <input type = "button" value = "night" onclick="nightDayHandler(this)">
+
         <header>
             <h1> <a href = "Index.html">Javascript </a>  </h1>
         </header>
@@ -20,13 +72,17 @@
         </nav>
 
     <article>
-            <h2>자바 스크립트</h2>
-            자바 스크립트란
-            <ul>
-                 <li>동적 언어</li>
-                 <li>제육 맛있겠다</li>
-            </ul>
+            <h2 style="background-color:coral;color:powderblue">JavaScript란</h2>
     </article>     
-       
+
+    <p style = "padding-top: 180px">
+        JavaScript(often shortened to JS) is a lightweight,
+        interpreted, object-oriented  <span class = "js" id = "us">language</span> with first-class functions, and is b
+        est known as the scripting  <span class = "js">language</span> for Web pages, but it's used in many non-brow
+        ser <span>environments</span> as well. It is a prototype-based, multi-paradigm scripting  <span class = "js">language</span> that is dynam
+        ic, and supports object-oriented, imperative, and functional programming styles.
+    </p>
+    
+
 </body>
 </html>
