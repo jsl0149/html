@@ -21,36 +21,11 @@
         }
 
     </style>
-
-    <script>
-
-        function nightDayHandler(self){
-
-        var alist = document.querySelectorAll('a');
-        var target =  document.querySelector('body');
-
-        if(self.value === 'night'){
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src = "colors.js"> 
         
-            
-        for(i = 0;i<alist.length;i++){
-            alist[i].style.color = 'powderblue';
-        }    
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        self.value = 'day';
-        }
-
-        else{
-
-            for(i = 0;i<alist.length;i++){
-            alist[i].style.color = 'blue';
-            }     
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        self.value = 'night';
-        }
-
-    }
+    
     </script>
 
 </head>
